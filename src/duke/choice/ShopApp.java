@@ -4,13 +4,12 @@ public class ShopApp {
     public static void main(String[] args) {
 
         double tax = 0.2;
-        //double total;
         String[] shoppingBasketCSV;
 
         // instantiate objects
-        Customer customer1 = new Customer("Pinky");
-        Clothing item1 = new Clothing("Blue Jacket", 20.91, "M");
-        Clothing item2 = new Clothing("Orange T-Shirt", 10.52, "S");
+        Customer customer1  = new Customer("Pinky");
+        Clothing item1      = new Clothing("Blue Jacket", 20.91, "M");
+        Clothing item2      = new Clothing("Orange T-Shirt", 10.52, "S");
 
         customer1.Purchase(item1, 1, tax); // Jacket
         customer1.Purchase(item2, 1, tax); // Tshirts

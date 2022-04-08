@@ -15,10 +15,10 @@ public class ShoppingBasketItem {
         NumberOfItems   = _numberOfItemsPurchased;
         PurchaseDate    = _purchasedate;
         totalexVAT      = NumberOfItems * _anItem.GetPrice();
-        totalexVAT      = totalexVAT + totalexVAT * _tax;
+        totalexVAT      = totalexVAT + totalexVAT * _tax;                       // ??interesting totalexVat =+totalexVAT * _tax gives wrong result
     }
 
-    public String GetBasketItemAsCSV(ShoppingBasketItem _basketitem){           //make csv string of basketitem
+    public String GetBasketItemAsCSV(ShoppingBasketItem _basketitem){           // make csv string of basketitem
         
         String basketItemCSV =  _basketitem.Item.GetDescription() + ", " +
                                 String.valueOf(_basketitem.Item.GetPrice()) + ", " +
