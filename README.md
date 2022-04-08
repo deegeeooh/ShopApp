@@ -1,1 +1,1 @@
-Java code exercize
+Java code exercise
