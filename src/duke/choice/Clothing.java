@@ -4,7 +4,7 @@ public class Clothing {
 
     private String description;
     private double price;
-    private String size = "M";
+    private String size;
 
     // constructor
     public Clothing(String _description, double _price, int _size) {

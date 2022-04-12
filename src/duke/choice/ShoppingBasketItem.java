@@ -40,4 +40,9 @@ public class ShoppingBasketItem {
     public double GetTotal(){
         return totalinclVAT;
     }
+    
+    
+    
+    
+    
 }

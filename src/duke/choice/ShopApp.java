@@ -7,8 +7,8 @@ public class ShopApp {
         String[] shoppingBasketCSV;
 
         // instantiate objects
-        Customer customer1  = new Customer("Pinky");
-        Clothing item1      = new Clothing("Blue Jacket", 20.91, 2);
+        Customer customer1  = new Customer("Pinky", "XL");
+        Clothing item1      = new Clothing("Blue Jacket", 20.91, 4);
         Clothing item2      = new Clothing("Orange T-Shirt", 10.52, 12);
 
         customer1.Purchase(item1, 1, tax); // Jacket
@@ -26,6 +26,7 @@ public class ShopApp {
         }
 
         System.out.println();
-        System.out.println("Total:  " + customer1.GetTotal());        
+        System.out.println("Total:  " + customer1.GetTotal());     
+        System.out.println("Total Iterated (exercise 4-3) :" + (customer1.IterateTotal()) * (1 + tax) );   
     }
 }
