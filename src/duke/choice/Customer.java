@@ -8,8 +8,8 @@ public class Customer {
     private String Name;
     private ArrayList<ShoppingBasketItem> ShoppingBasket = new ArrayList<ShoppingBasketItem>();
     private double Total;
-
-    public Customer(String _name) {
+    
+    public Customer(String _name) {     //contructor
         Name = _name;
     }
 
@@ -17,14 +17,14 @@ public class Customer {
         return Name;
     }
 
-    public void Purchase(Clothing _clothing, int _amount, double _tax) {
-        ShoppingBasket.add(new ShoppingBasketItem(_clothing, _amount, _tax, LocalDate.now()));
+    public void Purchase(Clothing _clothing, int _amount, double _tax) {                
+    
+        ShoppingBasketItem item = new ShoppingBasketItem(_clothing, _amount, _tax, LocalDate.now());
+        ShoppingBasket.add (item);
+        Total = Total + item.GetTotal();
     }
 
-    public double CalculateTotalexVAT() {
-        for (ShoppingBasketItem item : ShoppingBasket) {
-            Total = Total + item.GetTotal(item);                    //?? interesting Total =+ item.GetTotal(item); gives wrong result
-        }
+    public double GetTotal(){
         return Total;
     }
 

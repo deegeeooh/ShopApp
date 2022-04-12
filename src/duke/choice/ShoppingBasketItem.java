@@ -7,15 +7,14 @@ public class ShoppingBasketItem {
     private Clothing Item;
     private int NumberOfItems;
     private LocalDate PurchaseDate;
-    private double totalexVAT;
+    private double totalinclVAT;         
 
-    public ShoppingBasketItem(Clothing _anItem, int _numberOfItemsPurchased, double _tax, LocalDate _purchasedate) {
+    public ShoppingBasketItem(Clothing _anItem, int _numberOfItemsPurchased, double _tax, LocalDate _purchasedate) {            //constructor
         
         Item            = _anItem;
         NumberOfItems   = _numberOfItemsPurchased;
         PurchaseDate    = _purchasedate;
-        totalexVAT      = NumberOfItems * _anItem.GetPrice();
-        totalexVAT      = totalexVAT + totalexVAT * _tax;                       // ??interesting totalexVat =+totalexVAT * _tax gives wrong result
+        totalinclVAT      = NumberOfItems * _anItem.GetPrice() * (1 + _tax);
     }
 
     public String GetBasketItemAsCSV(ShoppingBasketItem _basketitem){           // make csv string of basketitem
@@ -25,7 +24,7 @@ public class ShoppingBasketItem {
                                 _basketitem.Item.GetSize() + ", " +
                                 _basketitem.NumberOfItems + ", " +
                                 _basketitem.PurchaseDate + ", " +
-                                totalexVAT;
+                                totalinclVAT;
         return basketItemCSV;                            
     }
     
@@ -38,7 +37,7 @@ public class ShoppingBasketItem {
     public LocalDate GetDateOfPurchase(ShoppingBasketItem _basketitem){
         return _basketitem.PurchaseDate;
     }
-    public double GetTotal(ShoppingBasketItem _basketitem){
-        return _basketitem.totalexVAT;
+    public double GetTotal(){
+        return totalinclVAT;
     }
 }

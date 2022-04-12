@@ -8,8 +8,8 @@ public class ShopApp {
 
         // instantiate objects
         Customer customer1  = new Customer("Pinky");
-        Clothing item1      = new Clothing("Blue Jacket", 20.91, "M");
-        Clothing item2      = new Clothing("Orange T-Shirt", 10.52, "S");
+        Clothing item1      = new Clothing("Blue Jacket", 20.91, 2);
+        Clothing item2      = new Clothing("Orange T-Shirt", 10.52, 12);
 
         customer1.Purchase(item1, 1, tax); // Jacket
         customer1.Purchase(item2, 1, tax); // Tshirts
@@ -26,6 +26,6 @@ public class ShopApp {
         }
 
         System.out.println();
-        System.out.println("Total costs: " + customer1.CalculateTotalexVAT());
+        System.out.println("Total:  " + customer1.GetTotal());        
     }
 }
