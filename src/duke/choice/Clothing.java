@@ -22,8 +22,8 @@ public class Clothing {
 
     // behaviour
     
-    public String SetSize(int _size) {
-        switch (_size) {
+    public String SetSize(int _measurement) {          // ex 5-2
+        switch (_measurement) {
         case 1, 2, 3:
             return "S";
 

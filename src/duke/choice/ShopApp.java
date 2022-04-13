@@ -22,7 +22,8 @@ public class ShopApp {
         item1.Setprice(7);
         
         System.out.println("Welcome to the Duke Choice Shop");
-        System.out.println("The name of the new customer is: " + customer1.GetName());
+        System.out.println("The name of the new customer is: " + customer1.GetName() + " with size: " +
+                                                                 customer1.GetSize());
         System.out.println("Shopping basket content:");
 
         shoppingBasketCSV = customer1.ShoppingBasketCSV();

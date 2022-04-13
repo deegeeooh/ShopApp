@@ -18,7 +18,11 @@ public class Customer {
     public String GetName() {
         return name;
     }
+    public String GetSize() {
+        return size;
+    }
 
+    
     public void Purchase(Clothing _clothing, int _amount, double _tax) {
 
         if (_clothing.GetSize() == this.size) { // only add to shopping basket if match customer's size
