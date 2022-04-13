@@ -14,7 +14,7 @@ public class ShoppingBasketItem {
         Item            = _anItem;
         NumberOfItems   = _numberOfItemsPurchased;
         PurchaseDate    = _purchasedate;
-        totalinclVAT      = NumberOfItems * _anItem.GetPrice() * (1 + _tax);
+        totalinclVAT    = NumberOfItems * _anItem.GetPrice() * (1 + _tax);
     }
 
     public String GetBasketItemAsCSV(ShoppingBasketItem _basketitem){           // make csv string of basketitem
@@ -28,8 +28,8 @@ public class ShoppingBasketItem {
         return basketItemCSV;                            
     }
     
-    public Clothing GetItem(ShoppingBasketItem _basketitem){
-        return _basketitem.Item;
+    public Clothing GetItem(){
+        return Item;
     }
     public int GetNumberOfItems(ShoppingBasketItem _basketitem){
         return _basketitem.NumberOfItems;
@@ -40,9 +40,5 @@ public class ShoppingBasketItem {
     public double GetTotal(){
         return totalinclVAT;
     }
-    
-    
-    
-    
-    
+       
 }
