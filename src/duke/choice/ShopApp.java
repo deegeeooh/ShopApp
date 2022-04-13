@@ -7,9 +7,9 @@ public class ShopApp {
         String[] shoppingBasketCSV;
 
         // instantiate objects
-        Customer customer1  = new Customer("Pinky", "XL");
+        Customer customer1  = new Customer("Pinky", "M");
         Clothing item1      = new Clothing("Blue Jacket", 20.91, 4);
-        Clothing item2      = new Clothing("Orange T-Shirt", 10.52, 12);
+        Clothing item2      = new Clothing("Orange T-Shirt", 10.52, 6);
 
         customer1.Purchase(item1, 1, tax); // Jacket
         customer1.Purchase(item2, 1, tax); // Tshirts

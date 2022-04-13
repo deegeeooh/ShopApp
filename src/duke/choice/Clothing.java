@@ -7,10 +7,10 @@ public class Clothing {
     private String size;
 
     // constructor
-    public Clothing(String _description, double _price, int _size) {
+    public Clothing(String _description, double _price, int _measure) {
         description = _description;
         price       = _price;
-        size        = SetSize(_size);
+        size        = SetSize(_measure);
     }
     
     public String SetSize(int _size){
