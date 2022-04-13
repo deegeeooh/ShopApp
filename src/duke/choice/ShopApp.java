@@ -3,7 +3,7 @@ package duke.choice;
 public class ShopApp {
     public static void main(String[] args) {
 
-        double tax = 0.2;
+        //double tax = 0.2;
         String[] shoppingBasketCSV;
 
         // instantiate objects
@@ -14,12 +14,12 @@ public class ShopApp {
         Clothing item4      = new Clothing("Grey Working Trousers", 25, 2);
         
         // add to shoppingbasket (when measure = clients size)
-        customer1.Purchase(item1, 2, tax); 
-        customer1.Purchase(item2, 1, tax); 
-        customer1.Purchase(item3, 1, tax); 
-        customer1.Purchase(item4, 1, tax); 
+        customer1.Purchase(item1, 2); 
+        customer1.Purchase(item2, 1); 
+        customer1.Purchase(item3, 1); 
+        customer1.Purchase(item4, 1); 
 
-        item1.Setprice(7);
+        //item1.Setprice(7);
         
         System.out.println("Welcome to the Duke Choice Shop");
         System.out.println("The name of the new customer is: " + customer1.GetName() + " with size: " +

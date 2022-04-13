@@ -9,7 +9,7 @@ public class ShoppingBasketItem {
     private LocalDate PurchaseDate;
     private double totalinclVAT;         
 
-    public ShoppingBasketItem(Clothing _anItem, int _numberOfItemsPurchased, double _tax, LocalDate _purchasedate) {            //constructor
+    public ShoppingBasketItem(Clothing _anItem, int _numberOfItemsPurchased, LocalDate _purchasedate) {            //constructor
         
         Item            = _anItem;
         NumberOfItems   = _numberOfItemsPurchased;

@@ -23,10 +23,10 @@ public class Customer {
     }
 
     
-    public void Purchase(Clothing _clothing, int _amount, double _tax) {
+    public void Purchase(Clothing _clothing, int _amount) {
 
         if (_clothing.GetSize() == this.size) { // only add to shopping basket if match customer's size
-            ShoppingBasketItem item = new ShoppingBasketItem(_clothing, _amount, _tax, LocalDate.now());
+            ShoppingBasketItem item = new ShoppingBasketItem(_clothing, _amount, LocalDate.now());
             ShoppingBasket.add(item);
             Total += item.GetTotal();      
         }
