@@ -8,7 +8,7 @@ public class Customer {
     private String name;
     private String size;
     private ArrayList<ShoppingBasketItem> ShoppingBasket = new ArrayList<ShoppingBasketItem>();
-    private double Total;
+    private double Total;       // total of all shoppingbasket items incl tax
 
     public Customer(String _name, String _size) { // contructor
         name = _name;
@@ -24,15 +24,15 @@ public class Customer {
         if (_clothing.GetSize() == this.size) { // only add to shopping basket if match customer's size
             ShoppingBasketItem item = new ShoppingBasketItem(_clothing, _amount, _tax, LocalDate.now());
             ShoppingBasket.add(item);
-            Total = Total + item.GetTotal();
+            Total += item.GetTotal();      
         }
     }
 
-    public double GetTotal() {
+    public double GetTotal() { 
         return Total;
     }
 
-    // or: iterate through array exercise 4-3
+    // or: iterate through array exercise 4-3       this calculates total based on current item's prices
     public double IterateTotal() {
         double iteratedTotal = 0;
         for (ShoppingBasketItem item : ShoppingBasket) {
