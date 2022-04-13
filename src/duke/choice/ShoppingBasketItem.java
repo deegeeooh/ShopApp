@@ -14,7 +14,7 @@ public class ShoppingBasketItem {
         Item            = _anItem;
         NumberOfItems   = _numberOfItemsPurchased;
         PurchaseDate    = _purchasedate;
-        totalinclVAT    = NumberOfItems * _anItem.GetPrice() * (1 + _tax);
+        totalinclVAT    = NumberOfItems * _anItem.GetPrice();      // price is calculated at time of purchase
     }
 
     public String GetBasketItemAsCSV(ShoppingBasketItem _basketitem){           // make csv string of basketitem
