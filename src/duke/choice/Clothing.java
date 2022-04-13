@@ -4,8 +4,8 @@ public class Clothing {
 
     // constants (ex 5-1)
 
-    private final double TaxRate = 0.20;        // I'd put taxrate somewhere else 
-    private final double minPrice = 10;
+    public static final double TaxRate  = 0.20;        // public seems default 
+    public static final double minPrice = 10;   
 
     // properties
 
@@ -17,19 +17,20 @@ public class Clothing {
     public Clothing(String _description, double _price, int _measure) {
         description = _description;
         this.Setprice(_price);          // ex 5-1
-        size = SetSize(_measure);
+        size = SetSize(_measure);       // convert measure to sizes
     }
-
+    
+    
     // behaviour
     
-    public String SetSize(int _measurement) {          // ex 5-2
+    public static String SetSize(int _measurement) {          // ex 5-2
         switch (_measurement) {
         case 1, 2, 3:
             return "S";
 
         case 4, 5, 6:
             return "M";
-
+            
         case 7, 8, 9:
             return "L";
 
