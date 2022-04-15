@@ -8,8 +8,7 @@ public class Customer {
     private String name;
     private String size;
     private ArrayList<ShoppingBasketItem> ShoppingBasket = new ArrayList<ShoppingBasketItem>();
-
-    private double Total;       // total of all shoppingbasket items incl tax
+    private static double Total;       // total of all shoppingbasket items incl tax
 
     public Customer() {
     }
