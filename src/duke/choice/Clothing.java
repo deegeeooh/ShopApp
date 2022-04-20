@@ -35,7 +35,7 @@ public class Clothing implements Comparable<Clothing> {  //comparable interface 
     
     
     
-    @Override           
+    @Override          
     public String toString() {      
         return GetDescription() + ", " + GetPrice()+ ", " + GetPrice();
     }
@@ -47,7 +47,7 @@ public class Clothing implements Comparable<Clothing> {  //comparable interface 
      * (abstract: has no code body)
      */
      
-    @Override
+    @Override       // compareTo method as included in the comparable interface https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
     public int compareTo(Clothing _Clothing) {
         return this.description.compareTo(_Clothing.description);
     }

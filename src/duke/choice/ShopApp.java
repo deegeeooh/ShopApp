@@ -7,7 +7,7 @@ import java.util.Locale;
 /**
  * 
  * 
- * frequently used keyboard shortcuts:
+ * frequently used keyboard shortcuts VSCODE
  * 
  * CTRL-SHIFT-P         command palette
  * SHIFT-ALT-F          format document
